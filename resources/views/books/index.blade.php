@@ -35,6 +35,8 @@
 <a class="btn btn-blue" href="{{ route('books.show', $book->id) }}">Show</a>
 
 
+@if(Auth::user() && Auth::user()->id === $book->user_id)
+
 <a class="btn btn-blue" href="{{ route('books.edit', $book->id) }}">Edit</a>
 
 
@@ -48,7 +50,7 @@
 <button type="submit" class="btn btn-red">Delete</button>
 
 </form>
-
+@endif
 
 
 </article>
