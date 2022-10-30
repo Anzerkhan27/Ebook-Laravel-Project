@@ -7,15 +7,18 @@
             <div class="card">
                 <div class="card-header">{{ $user->username }}</div>
 
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-between">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="/books/create">Add New Book</a>
+                
                 </div>
+                 
+            
             </div>
         </div>
     </div>

@@ -11,6 +11,14 @@ class Book extends Model
 
 
 
+    protected $fillable = [
+        'title',
+         'author'    ,
+         'description',
+    ];
+
+
+
     public function createdBy(){
 
     $this->belongsTo(User::class);
