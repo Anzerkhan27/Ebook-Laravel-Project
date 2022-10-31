@@ -10,11 +10,25 @@ use Illuminate\Http\Request;
 
 class AccountsController extends Controller
 {
-    public function index($user)
+   
+/**
+     * Show the account page of a specified user.
+     *
+     * @param  $user
+     * @return \Illuminate\Http\Response
+     */  
+
+  
+  
+  
+  
+  
+  public function index($user)
     {
 
 
       $user = User::findorfail($user);
+
 
       if(Auth::id() == $user->id) {
        // valid user

@@ -36,7 +36,26 @@
                                 </li>
 
                                 <li class="nav-item">
-                                <a  class="nav-link" href="/books/">Search Books</a>
+
+
+                                <div>
+        <div class="mx-auto pull-right">
+            <div class="">
+                <form  class="form-inline" action="{{ route('books.index') }}" method="GET" role="search">
+
+                    <div class="input-group ">
+                        
+                        <input type="text" class="form-control mr-5" name="term" placeholder="Search books" id="term">
+                        <span class="input-group-btn mr-5 mt-1">
+                            <button class="btn btn-outline-info mx-3" type="submit" title="Search projects">
+                                <span class="fas fa-search">Search</span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
                                 </li>
                   
 
