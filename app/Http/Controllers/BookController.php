@@ -51,7 +51,7 @@ public function index(Request $request) {
               }]                
         ])
          ->orderBy("created_at", "desc")
-        ->paginate(20);
+        ->paginate(50);
 
         return view('books/index', [
         
@@ -83,13 +83,9 @@ public function index(Request $request) {
             
             auth()->user()->booksCreated()->create($request->all());
             
-         
+            $user = Auth::user();
            
-            
-            return redirect()->route('books.index')
-    
-            ->with('success', 'Book added successfully');
-            
+            return redirect()->route('account.show',['user'=> $user])->with('success', 'Book updated successfully');
             
      }
      
@@ -160,10 +156,9 @@ public function update(Request $request, Book $book) {
     $book->update($request->all());
     
     
-    
-    return redirect()->route('books.index')
-    
-    ->with('success', 'Book updated successfully');
+    $user = Auth::user();
+
+    return redirect()->route('account.show',['user'=> $user])->with('success', 'Book updated successfully');
     
     }
 
@@ -179,11 +174,8 @@ public function update(Request $request, Book $book) {
 
         $book->delete();
         
-        
-        
-        return redirect()->route('books.index')
-        
-        ->with('success', 'Book deleted successfully');
+        $user = Auth::user();
+        return redirect()->route('account.show',['user'=> $user])->with('success', 'Book updated successfully');
         
         } 
 

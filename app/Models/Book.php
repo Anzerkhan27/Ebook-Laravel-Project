@@ -9,7 +9,11 @@ class Book extends Model
 {
     use HasFactory;
 
-
+/**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
 
     protected $fillable = [
         'title',
@@ -18,6 +22,8 @@ class Book extends Model
     ];
 
 
+
+//A many-to-one relationship with User model
 
     public function createdBy(){
 

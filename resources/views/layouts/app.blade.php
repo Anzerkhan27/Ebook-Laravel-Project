@@ -13,14 +13,25 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+
+
 </head>
-<body>
+
+
+
+
+
+
+
+<body class=" bg-success " >
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand " style="font-size: 25px;"  href="{{ url('/') }}">
                   EBOOK
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -32,31 +43,21 @@
                     <ul class="navbar-nav me-auto">
 
                     <li class="nav-item">
-                    <a  class="nav-link"  href="/">Home</a></li>    
-                                </li>
+                    <a  class="nav-link "  style="font-size: 18px;"  href="/">Home</a></li>    
+                            </li>
 
-                                <li class="nav-item">
+                   @auth
+                            <li class="nav-item">
+                    <a  class="nav-link "  style="font-size: 18px;"  href="{!! route('account.show', Auth::user()->id) !!}">{{__('My Account')   }}</a></li>    
+                            </li>
+          
+                   @else
+                   @endauth
 
-
-                                <div>
-        <div class="mx-auto pull-right">
-            <div class="">
-                <form  class="form-inline" action="{{ route('books.index') }}" method="GET" role="search">
-
-                    <div class="input-group ">
-                        
-                        <input type="text" class="form-control mr-5" name="term" placeholder="Search books" id="term">
-                        <span class="input-group-btn mr-5 mt-1">
-                            <button class="btn btn-outline-info mx-3" type="submit" title="Search projects">
-                                <span class="fas fa-search">Search</span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-            </div>
-        </div>
+                              
+       
     </div>
-                                </li>
+                              
                   
 
 
@@ -79,22 +80,14 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->username }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                            <li class="nav-item ">
+                               
+                                    <a class="nav-link" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item" href="{!! route('account.show', Auth::user()->id) !!}">
-                                        {{__('My Account')   }}
-                                      
-                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -107,7 +100,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 ">
             @yield('content')
         </main>
     </div>

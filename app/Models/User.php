@@ -43,6 +43,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+
+    
+    // The one-to-many relationshio with BOOK model
+     
+
     public function booksCreated(){
 
        

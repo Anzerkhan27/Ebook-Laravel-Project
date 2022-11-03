@@ -13,16 +13,12 @@ class AccountsController extends Controller
    
 /**
      * Show the account page of a specified user.
-     *
+     * Validate if the account page belongs to auth user 
+     * 
      * @param  $user
      * @return \Illuminate\Http\Response
      */  
-
-  
-  
-  
-  
-  
+   
   public function index($user)
     {
 

@@ -21,8 +21,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/search', [BookController::class, 'search'])->name('book.search');
-
 
 Route::resource('/books', BookController::class);
 
