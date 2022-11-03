@@ -8,14 +8,13 @@
 
 
 <section class="vh-100" >
+<h1 class="text-white text-center">My Account</h1>  
   <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center  h-100">
-    <div class="div col-12 col-md-10 col-lg-8  text-center text-white mt-2 mb-2"><h1>My Account<h1></div>   
+    <div class="row d-flex justify-content-center  h-100">   
       <div class="col col-md-9 col-lg-7 col-xl-5">
         <div class="card" style="border-radius: 15px;">
           <div class="card-body p-4">
             <div class="d-flex text-black">
-        
               <div class="flex-grow-1 ms-3">
                 <h5 class="mb-1">{{$user->username }}</h5>
                 <p class="mb-2 pb-1" style="color: #2b2a2a;">{{$user->email}}</p>
@@ -45,7 +44,7 @@
 
 
 
-  <h2 class="text-center text-white my-2" >No books Added</h2>
+  <h2 class="text-center text-white my-4" >No books Added</h2>
   </div>
     </div>
         

@@ -76,7 +76,7 @@
   <li class="list-group-item my-2  d-flex justify-content-between align-items-center">
     <div>
       <div class="fw-bold">{{$book->title}}</div>
-      <div class="text-muted">{{$book->author}}</div>
+      <div class="text-muted">Written by {{$book->author}}</div>
     </div>
 
     <div class="d-flex justify-content-between  align-items-center" >

@@ -23,7 +23,7 @@
                                     </div>
                                     <!--end of col-->
                                     <div class="col-auto">
-                                        <button class="btn btn-lg btn-warning" type="submit" title="Search projects"  >Search</button>
+                                        <button class="btn btn-lg btn-warning" type="submit" title="Search Book"  >Search</button>
                                     </div>
                                     <!--end of col-->
                                 </div>

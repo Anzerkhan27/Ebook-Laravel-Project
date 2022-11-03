@@ -18,7 +18,7 @@ class BookFactory extends Factory
     {
         return [
             
-            'user_id'=>rand(1,10),
+        
             'title' => fake()->name(),
             'author' => fake()->name(),
             'description'=> fake()->realText(500)
