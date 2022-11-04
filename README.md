@@ -77,8 +77,8 @@
 
 <h1>Usage</h2>
 
-<h2>User<h2>
-<h3>Let's demonstrate the application usage for a normal user(not admin).
+<h2>Without Logging in<h2>
+<h3>Let's demonstrate the application usage for a normal user(not Logged in).
 
 -   Homepage View
     ![My Image](/public/images/Welcome-page.png)
@@ -98,8 +98,8 @@
     ![My Image 2](/public/images/Show-books.png)
     ![My Image 2](/public/images/Book.png)
 
-<h2>Admin<h2>
- <h3>Let's demonstrate the application usage for an Admin. We will Register as a Test User and demonstrate all the functionality of an Admin.
+<h2>User(Admin)<h2>
+ <h3>Let's demonstrate the application usage for an User(Admin). We will Register as a Test User and demonstrate all the functionality of an Admin.
 
 -   Registration page. Registering as Test User.
     ![My Image](/public/images/Register.png)
