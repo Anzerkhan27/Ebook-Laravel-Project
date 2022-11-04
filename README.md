@@ -6,7 +6,7 @@
 
  <br>
 
-<h3> EBOOK is Online Library web application project using (<a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="https://laravel.com" target="_blank">Laravel</a>). The main goal of this application is allow users to have an online access to their library for borrowing books. The web-application has Admin user functionality which allows admins to add/edit or delete books in the Database. The web application  includes the following operations: CRUD and user authentication.</p>
+<h3> EBOOK is an Online Library web application project which built using (<a href="https://getbootstrap.com/" target="_blank">Bootstrap 4.6</a>, <a href="https://laravel.com" target="_blank">Laravel 9</a>). The main goal of this application is allow users to have an online access to their library for borrowing books.It allows Users to search for their Book in the database. The web-application has Admin user functionality which allows admins to add/edit or delete books in the Database. The web application  includes the following operations: CRUD and user authentication.</p>
 
 <br>
 
@@ -88,13 +88,18 @@
     ![My Image 2](/public/images/Searching-books.png)
     ![My Image 2](/public/images/All_books.png)
 
+*   Searching for a Particular Book
+
+    ![My Image 2](/public/images/1-book.png)
+    ![My Image 2](/public/images/2-book.png)
+
 *   Detailed View of a resource(Book) by clicking Show Button
 
     ![My Image 2](/public/images/Show-books.png)
     ![My Image 2](/public/images/Book.png)
 
 <h2>Admin<h2>
- <h3>Let's demonstrate the application usage for an Admin. We will Register as a Test User and demonstrate all the functionality of an Admin
+ <h3>Let's demonstrate the application usage for an Admin. We will Register as a Test User and demonstrate all the functionality of an Admin.
 
 -   Registration page. Registering as Test User.
     ![My Image](/public/images/Register.png)
@@ -122,6 +127,9 @@
 
 *   We will now delete a resource/book that we just added. In our accounts page press the delete button and its gone!..
     ![My Image](/public/images/delete-book.png)
+
+<h1>Further Development</h2>
+<h3> The plan for further development is to create seperate routes for logging in for normal Users and Admin Users. The web-application should also allow Users to borrow books online for a due time. The scope for further development is large and I have planned it for Assignment 2</h3>
 
 <br>
 <h1>Refrences</h2>
