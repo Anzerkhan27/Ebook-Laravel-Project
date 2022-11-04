@@ -16,7 +16,6 @@ class BookController extends Controller
      */
     public function __construct()
     {
-
         $this->middleware('auth', array('except' => array('index', 'show')));
     }
 
@@ -28,7 +27,6 @@ class BookController extends Controller
 
     public function create()
     {
-
         return view('books.create');
     }
 
@@ -69,7 +67,6 @@ class BookController extends Controller
             'books/index',
             [
                 'books' => $books
-
             ]
         );
     }
@@ -97,12 +94,9 @@ class BookController extends Controller
         );
 
         auth()->user()->booksCreated()->create($request->all());
-
         $user = Auth::user();
-
         return redirect()->route('account.show', compact('user'));
     }
-
 
 
     /**
@@ -112,7 +106,6 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
     public function show(Book $book)
     {
 
@@ -121,7 +114,6 @@ class BookController extends Controller
             compact('book')
         );
     }
-
 
     /**
      * Show the form for editing the specified book.
@@ -139,7 +131,6 @@ class BookController extends Controller
         );
     }
 
-
     /**
      * Update the specified resource in storage.
      *
@@ -147,7 +138,6 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-
 
     public function update(Request $request, Book $book)
     {
@@ -160,13 +150,8 @@ class BookController extends Controller
             ]
         );
 
-
-
         $book->update($request->all());
-
-
         $user = Auth::user();
-
         return redirect()->route('account.show', compact('user'));
     }
 
