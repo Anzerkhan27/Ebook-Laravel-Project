@@ -11,6 +11,11 @@ class BookController extends Controller
 {
     
 
+/**
+ * Check if the user is logged in except for index and show method
+ * 
+ */
+
 
 public function __construct(){
 
@@ -33,12 +38,13 @@ public function create(){
 
 
  /**
-     * Display a listing of the books where title mathces search
-     *
+     * Display a listing of the books where title mathces the search word
+     * This was adapted from a post from Kingcosult on Oct 12 2020 on Dev Community here:
+     * https://dev.to/kingsconsult/how-to-implement-search-functionality-in-laravel-8-and-laravel-7-downwards-3g76
+     * 
      * @return \Illuminate\Http\Response
      */
-
-
+     
 
 public function index(Request $request) {
 
@@ -56,14 +62,17 @@ public function index(Request $request) {
         return view('books/index', [
         
         'books' => $books
-        
+
         ]);
         
         }
 
 /**
      * Store a newly created book in storage.
-     *
+     * This was adapted from a youtube tutorial by  Victor Gondalez on freeCodeCamp 
+     * youtube channel here:
+     * https://www.youtube.com/watch?v=ImtZ5yENzgE&amp;t=2635s
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -85,7 +94,7 @@ public function index(Request $request) {
             
             $user = Auth::user();
            
-            return redirect()->route('account.show',['user'=> $user])->with('success', 'Book updated successfully');
+            return redirect()->route('account.show',compact('user'));
             
      }
      
@@ -158,7 +167,7 @@ public function update(Request $request, Book $book) {
     
     $user = Auth::user();
 
-    return redirect()->route('account.show',['user'=> $user])->with('success', 'Book updated successfully');
+    return redirect()->route('account.show',compact('user'));
     
     }
 
@@ -175,7 +184,7 @@ public function update(Request $request, Book $book) {
         $book->delete();
         
         $user = Auth::user();
-        return redirect()->route('account.show',['user'=> $user])->with('success', 'Book updated successfully');
+        return redirect()->route('account.show',compact('user'));
         
         } 
 

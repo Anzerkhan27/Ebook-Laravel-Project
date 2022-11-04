@@ -4,7 +4,13 @@
 
 
 <div class="container">
-   
+
+
+
+{{--
+  This template is adapted from a post from Upasana Chau posted on bbbosstrap.com here:
+  https://bbbootstrap.com/snippets/bootstrap-sidebar-user-profile-62301382
+  --}}
 
 
 <section class="vh-100" >
@@ -37,38 +43,17 @@
           </div>
          </div>
          
+         
 
-  @if($user->booksCreated->count() == 0 )
+@if($user->booksCreated->count() == 0 )
 
-
-
-
-
-  <h2 class="text-center text-white my-4" >No books Added</h2>
-  </div>
-    </div>
-        
- 
-
-
+<h2 class="text-center text-white my-4" >No books Added</h2>
 </div>
-  
-
-
-
-
+</div>
+</div>
 </section>
-
-
-
-
-
 </div>
-
-  
-  
   @else
-
   <h2 class="text-center text-white my-3" >Books Added</h2>
   <table class="table table-bordered my-3 table-light table-hover ">
   <thead>

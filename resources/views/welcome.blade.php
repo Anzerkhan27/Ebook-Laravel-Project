@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 
+@section('title', 'Welcome')
 
 
 @section('content')
@@ -8,6 +9,10 @@
 
 <div class="container">
     
+{{-- 
+  This template is adapted from a post from Deyson on Free Boostrap snippets and examples here:
+  https://www.bootdey.com/snippets/view/bs4-search-Bar
+  --}}
 
 	<div class="row justify-content-center">
         <div class="div col-12 col-md-10 col-lg-8  text-center text-white mt-2 mb-5"><h1>Welcome to EBOOK<h1></div>

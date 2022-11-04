@@ -5,8 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use App\Models\User;
-use App\Models\Book;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,16 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(20)->create()->each(function($user){
-
-          Book::factory(rand(1,4))->create([
-
-             'user_id' => $user->id
-
-          ]);
-
-        });
-
+      
+      
+      $this->call(UserSeeder::class);
 
 
 

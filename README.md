@@ -10,10 +10,75 @@
 
 <br>
 
- <h1>Usage</h2>
+<h1>Installation</h1>
+  
+* <h2>Clone the Github repository</h2>
+  <h3>Inside the root folder of your local web development environment, open a new terminal window and clone the Github repository by using the command and change the directory in the newly formed project folder</h3>
+  <p style="background-color:white; color:black;padding:5px; "> git clone </p>
+  <br>
 
- <h2>User<h2>
- <h3>Let's demonstrate the application usage for a normal user(not admin).
+-   <h2>Install Composer Dependencies</h2>
+    <h3>Enter the Command</h3>
+    <br>
+    <p style="background-color:white; color:black;padding:5px;"> composer install </p>
+
+<br>
+
+-   <h2>Install NPM Dependencies</h2>
+    <h3>Enter the Commands: </h3>
+    <br>
+    <p style="background-color:white; color:black;padding:5px; "> npm install <br> npm run dev </p>
+
+<br>
+
+-   <h2>Copy the .env file</h2>
+    <h3>Enter the Command: </h3>
+    <br>
+    <p style="background-color:white; color:black; padding:5px;"> cp .env.example .env  </p>
+
+<br>
+
+-   <h2>Generate an App encryption Key</h2>
+    <h3>Enter the Command: </h3>
+    <br>
+    <p style="background-color:white; color:black; padding:5px;"> php artisan key:generate  </p>
+
+<br>
+
+-   <h2>Create an empty database for our application</h2>
+    <h3> Use your favorite database management tool to create an empty database.
+    Configure a username and password. </h3>
+    <br>
+
+*   <h2>Configure the .env file</h2>
+    <p style="background-color:white; color:black; padding:5px;"> DB_CONNECTION=mysql<br>
+    DB_HOST=127.0.0.1 <br>
+    DB_PORT=3306<br>
+    DB_DATABASE=laravel<br>
+    DB_USERNAME=root<br>
+    DB_PASSWORD=******** </p>
+    <h3>Adjust the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME and DB_PASSWORD according to your database</h3>
+
+<br>
+
+-   <h2>Migrate the Database</h2>
+    <p style="background-color:white; color:black; padding:5px;"> php artisan migrate  </p>
+    <br>
+
+*   <h2>Seed the Database</h2>
+    <p style="background-color:white; color:black; padding:5px;"> php artisan db:seed </p>
+    <br>
+
+*   <h2>Open the Application</h2>
+    <h3>Open the browser and go to your url</h3>
+    <br>
+
+<br>
+
+<h1>Usage</h2>
+
+<h2>User<h2>
+<h3>Let's demonstrate the application usage for a normal user(not admin).
 
 -   Homepage View
     ![My Image](/public/images/Welcome-page.png)
@@ -57,3 +122,27 @@
 
 *   We will now delete a resource/book that we just added. In our accounts page press the delete button and its gone!..
     ![My Image](/public/images/delete-book.png)
+
+<br>
+<h1>Refrences</h2>
+
+<h3>ZeroOne. (2018, April 21). Laravel restrict users to only be able to see their own profile. Stack Overflow. Retrieved November 4, 2022, from <a href="https://stackoverflow.com/questions/49951125/laravel-restrict-users-to-only-be-able-to-see-their-own-profile">https://stackoverflow.com/questions/49951125/laravel-restrict-users-to-only-be-able-to-see-their-own-profile. </a>    </h3>
+
+<br>
+
+<h3>Kingsconsult. (2020, October 12). How to implement search functionality in Laravel 8 and Laravel 7 downwards. DEV Community 👩‍💻👨‍💻.<a href="https://dev.to/kingsconsult/how-to-implement-search-functionality-in-laravel-8-and-laravel-7-downwards-3g76.">https://dev.to/kingsconsult/how-to-implement-search-functionality-in-laravel-8-and-laravel-7-downwards-3g76</a>  </h3>
+
+<br>
+
+<h3>Gondalez, V. (2019, May 7). Laravel PHP framework tutorial - full course for beginners (2019). YouTube. Retrieved November 4, 2022, from <h3><a href="https://www.youtube.com/watch?v=ImtZ5yENzgE&amp;t=2635s">https://www.youtube.com/watch?v=ImtZ5yENzgE&amp;t=2635s</a>
+
+<br>
+
+<h3>Aschmelyun, A. (2021, July 6). Laravel-job-board/databaseseeder.php at main · Aschmelyun/Laravel-job-board. GitHub. Retrieved November 4, 2022, from <a href="https://github.com/aschmelyun/laravel-job-board/blob/main/database/seeders/DatabaseSeeder.php">https://github.com/aschmelyun/laravel-job-board/blob/main/database/seeders/DatabaseSeeder.php</a>
+  </h3>
+
+<br>
+<h3>Chauhan, U. (2020, July 17). Bootstrap 5 sidebar user profile example. bbbootsrap. Retrieved November 4, 2022, from <a href="https://bbbootstrap.com/snippets/bootstrap-sidebar-user-profile-62301382 " >https://bbbootstrap.com/snippets/bootstrap-sidebar-user-profile-62301382 </a></h3>
+
+<br>
+<h3>Deyson. (n.d.). Bootstrap snippet. BS4 Search Bar. Free Bootstrap snippets and examples. Retrieved November 4, 2022, from   <a href="https://www.bootdey.com/snippets/view/bs4-search-Bar">https://www.bootdey.com/snippets/view/bs4-search-Bar </a></h3>

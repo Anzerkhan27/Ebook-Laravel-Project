@@ -2,10 +2,6 @@
 
 
 
-@section('title', 'All of our Books')
-
-
-
 @section('content')
 
 
@@ -18,6 +14,12 @@
 </div>
 
 @endif
+
+{{-- 
+  This template is adapted from a post from Deyson on Free Boostrap snippets and examples here:
+  https://www.bootdey.com/snippets/view/bs4-search-Bar
+  --}}
+
 
 <div class="row justify-content-center  mb-3">
                         <div class="col-12 col-md-10 col-lg-8">
